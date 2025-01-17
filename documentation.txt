@@ -1,0 +1,66 @@
+Project: MP3 tag reader and editor
+Name: Shivaprasad C M
+Date: 16/11/24
+
+Sample execution
+
+-> For no extra arguments:
+root@LAPTOP-GH45FCUE:~/mp3_Tag_reader# ./a.out 
+------------------------------------------------------------------
+ERROR: ./a.out : INVALID ARGUMENTS
+USAGE :
+To view please pass like: ./a.out -v mp3filename
+To edit please pass like: ./a.out -e -t/-a/-A/-m/-y/-c changing_text mp3filename
+To get help pass like : ./a.out --help
+------------------------------------------------------------------
+
+
+->For help menu:
+root@LAPTOP-GH45FCUE:~/mp3_Tag_reader# ./a.out --help
+
+-----------------HELP MENU---------------
+1. -v -> to view mp3 file contents
+2. -e -> to edit mp3 file contents
+         2.1. -t -> to edit song title
+         2.2. -a -> to edit artist name
+         2.3. -A -> to edit album name
+         2.4. -y -> to edit year
+         2.5. -m -> to edit content
+         2.6. -c -> to edit comment
+------------------------------------------
+
+
+->For viewing tag details:
+root@LAPTOP-GH45FCUE:~/mp3_Tag_reader# ./a.out -v Sample.mp3
+
+------SELECTED VIEW DETAILS-------
+--------------------------------------------------------------------
+                MP3 TAG READER AND EDITOR FOR ID3v2
+--------------------------------------------------------------------
+TITLE    :      hello_broo
+ARTIST   :      Yo Yo Honey Singh - [SongsPk.CC]
+ALBUM    :      Yaariyan
+YEAR     :      2050
+MUSIC    :      Bollywood Music - [SongsPk.CC]
+Comment  :      eng
+---------------------------------------------------------------------
+
+
+->For editing tag details:
+case 1: root@LAPTOP-GH45FCUE:~/mp3_Tag_reader# ./a.out -e -t hello Sample.mp3
+
+Enter where to make changes
+1.Save in another file
+2.Save in same file
+Enter choice: 1
+Enter the new file name: new.mp3
+Created file new.mp3
+Edited successfully
+
+case 2: root@LAPTOP-GH45FCUE:~/mp3_Tag_reader# ./a.out -e -A Super_hit Sample.mp3 
+
+Enter where to make changes
+1.Save in another file
+2.Save in same file
+Enter choice: 2
+Edited successfully
